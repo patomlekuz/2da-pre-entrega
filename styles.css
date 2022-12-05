@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.contenedor{
+    
+    max-width: 100%;
+    height: auto;
+    display:grid;
+    
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 70px 1fr 200px;
+    grid-template-areas: 
+        "navegacion encabezado"
+        "navegacion contenido"
+        "navegacion pie"
+    
+    ;
+
+}
+@media (max-width: 1024px){
+    .contenedor{
+        display: grid;
+        grid-template-columns: 1fr 90%;   
+     }
+
+
+}
+@media (max-width:767px){
+    .contenedor{
+        grid-template-columns: 1fr;
+        grid-template-rows: 30% 10% 60% ;
+        grid-template-areas: 
+        "navegacion"
+        "encabezado"
+        "contenido"
+        
+        ;
+    }
+    .navbar{
+        display:grid;
+        grid-auto-flow:column;
+        
+    }
+    nav img{
+       width:50px;      
+       
+    }
+    
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+header{
+    margin-left: 15px;
+    grid-area: encabezado;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-size: 27px;
+}
+nav{
+    grid-area: navegacion;
+    background-color: rgb(85, 117, 187);
+    justify-items: center;
+    text-align: center; 
+    height: 100%;
+
+}
+nav img{
+    border-radius: 50%;
+}
+
+nav ul li{
+    
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 5px;
+    
+    
+}
+main{
+    margin-left: 15px;
+    grid-area: contenido;
+}
+
+footer{
+    grid-area: pie;
+    justify-items: center;
+    text-align: center; 
+
+
+}
+section{
+    margin-left: 15px;
+}
+#galeria{
+    
+    max-width: 100%;
+    height: 100px;
+    margin: 10px;
+    display: grid;
+    
+    grid-template-columns: repeat(4,1fr);
+    
+      
+}
+
+section img{
+    display: flex;
+    flex-flow: wrap;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 150px;
+    height: 100px;
+    transform: scale(1);
+    transition: transform .5s;
+}
+section img:hover{
+    transform: scale(1.5);
+}
+section p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    
+}
+button{
+        
+        padding: 12px;
+        width: 90px;
+        background-color: rgb(44, 44, 172);
+        color:aliceblue;
+        border-radius: 4px;
+        font-size: 90%;
+            
+
+        
+}
+nav ul{
+    justify-items: center;
+    text-align: center; 
+}
+
+.integrantes{
+    list-style: none;
+    font-size: 20px;
+    text-align: center;
+}
+h2{
+    display: grid;
+    text-align: center;
+    border-style: double;
+    margin: 5px;
+}
+.integrantes-a{
+    list-style: none;
+    font-size: 20px;
+    text-align: center;
+}
+.discografia{
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 5px;
+    text-align: center;
+}
+h1{
+    margin-top: 10px;
+}
